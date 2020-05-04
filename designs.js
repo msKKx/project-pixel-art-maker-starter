@@ -17,12 +17,12 @@ function makeGrid(height, width) { // function, that creates a canvas of the siz
 }
 
 size.addEventListener('submit', function (event) {//event, that calls the makeGrid function, if the submit button is pressed
+    event.preventDefault();
     for (i=0; i< height; i++){
         grid.deleteRow(i);
     }
     height = document.getElementById('inputHeight').value; // select height 
     width = document.getElementById('inputWidth').value; // select width 
-    event.preventDefault();
     makeGrid(height, width);
 })
 
